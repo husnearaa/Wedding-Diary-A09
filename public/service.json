@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "service_image": "https://i.ibb.co/BqmznVt/w-planning.png",
+        "service_name": "Wedding Planning",
+        "service_short_description": "Let us make your dream wedding a reality with our expert planning services.",
+        "price": 4000
+    },
+    {
+        "id": 2,
+        "service_image": "https://i.ibb.co/T20SBZg/side-view-photographer-married-couple.jpg",
+        "service_name": "Photography and Videography",
+        "service_short_description": "Capture every moment of your special day with our skilled photographers and videographers.",
+        "price": 6000
+    },
+    {
+        "id": 3,
+        "service_image": "https://i.ibb.co/6vvRDjv/floral.png",
+        "service_name": "Floral and Decor",
+        "service_short_description": "Transform your venue with stunning floral arrangements and elegant decor.",
+        "price": 3500
+    },
+    {
+        "id": 4,
+        "service_image": "https://i.ibb.co/GkYHVVP/makeup.png",
+        "service_name": "Hair and Makeup",
+        "service_short_description": "Look and feel your best on your big day with our professional hair and makeup artists.",
+        "price": 6000
+    },
+    {
+        "id": 5,
+        "service_image": "https://i.ibb.co/ZXBFzQW/food.png",
+        "service_name": "Catering and Food ",
+        "service_short_description": "Delight your guests with a delectable menu customized to your preferences.",
+        "price": 8000
+    },
+    {
+        "id": 6,
+        "service_image": "https://i.ibb.co/LdHYY9x/entertainment.png",
+        "service_name": "Entertainment",
+        "service_short_description": "Keep your guests entertained with a variety of musical and performance acts.",
+        "price": 3000
+    }
+     
+]
