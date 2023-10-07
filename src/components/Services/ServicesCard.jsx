@@ -26,7 +26,7 @@ const ServicesCard = ({ service }) => {
                     <Link to={`/services/${id}`}>
                         <button
                             className="block w-full select-none rounded-lg bg-[#ca786c] py-3.5 px-7
-                         text-center align-middle  text-sm font-bold uppercase text-white  "
+                         text-center align-middle  text-sm font-bold text-white  "
                         >
                             Details
                         </button>

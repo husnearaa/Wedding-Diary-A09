@@ -1,31 +1,37 @@
 [
     {
         "id": 1,
+        "service_name": "Wedding Planning",
         "service_image": "https://i.ibb.co/VWVzfBC/modern-wedding-planner-laptop-top-view.jpg",
-        "service_long_description": "Our Wedding Planning Service is dedicated to making your dream wedding a reality. Our experienced team will work closely with you to plan every detail, from selecting the perfect venue to coordinating vendors and managing timelines. Relax and enjoy your special day while we take care of all the logistics."
+        "service_long_description": "Our Wedding Planning Service is dedicated to turning your wedding dreams into a seamless and unforgettable reality. Planning a wedding can be a complex and overwhelming task, but with our expert team by your side, you can relax and enjoy every moment of your special day.Our experienced wedding planners will work closely with you to understand your vision and preferences. Whether you desire a romantic garden wedding, an elegant ballroom affair, or a destination celebration, we have the knowledge and expertise to bring your unique vision to life."
     },
     {
         "id": 2,
+        "service_name": "Photography and Videography",
         "service_image": "https://i.ibb.co/LPrwNs5/bride-among-trees.jpg",
         "service_long_description": "Capture every precious moment of your wedding day with our Photography and Videography Service. Our skilled photographers and videographers will use their creative expertise to document your wedding in a beautiful and cinematic way. We aim to create lasting memories that you can cherish forever."
     },
     {
         "id": 3,
+        "service_name": "Floral and Decor",
         "service_image": "https://i.ibb.co/RzNhbtz/decor.png",
         "service_long_description": "Transform your wedding venue into a breathtaking wonderland with our Floral and Decor Service. Our team of talented designers will work closely with you to choose the perfect floral arrangements and decor elements that match your style and vision. Let the ambiance of your wedding speak volumes about your love story."
     },
     {
         "id": 4,
+        "service_name": "Hair and Makeup",
         "service_image": "https://i.ibb.co/LP41g7d/bride-wedding-happy-bride.jpg",
-        "service_long_description": "Look and feel your absolute best on your big day with our Hair and Makeup Service. Our professional artists will enhance your natural beauty, ensuring that you radiate confidence and elegance. From glamorous hairstyles to flawless makeup, we will pamper you and your bridal party."
+        "service_long_description": "Look and feel your absolute best on your big day with our Hair and Makeup Service. Our professional artists will enhance your natural beauty, ensuring that you radiate confidence and elegance. From glamorous hairstyles to flawless makeup, we will pamper you and your bridal party.Our Hair and Makeup Service is dedicated to enhancing your natural beauty and making you look and feel your absolute best on your wedding day. We understand that your wedding day is one of the most important days of your life, and you deserve to radiate confidence, elegance, and timeless beauty."
     },
     {
         "id": 5,
+        "service_name": "Catering and Food ",
         "service_image": "https://i.ibb.co/ZXBFzQW/food.png",
         "service_long_description": "Delight your guests with a delectable menu customized to your preferences through our Catering and Food Service. Our culinary experts will craft a feast that leaves a lasting impression. From appetizers to desserts, we offer a wide range of options to satisfy every palate and dietary requirement."
     },
     {
         "id": 6,
+        "service_name": "Entertainment",
         "service_image": "https://i.ibb.co/LdHYY9x/entertainment.png",
         "service_long_description": "Elevate the fun and excitement of your wedding with our Entertainment Services. We provide a diverse range of musical and performance acts to keep your guests entertained throughout the celebration. From live bands to DJs and dance performances, our entertainment options will make your wedding a memorable event."
     }
