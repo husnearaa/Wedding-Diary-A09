@@ -1,14 +1,32 @@
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import { useContext } from "react";
 
 
 const Navbar = () => {
+
+
+    const { user, logOut } = useContext(AuthContext);
+
+
+    const handleSignOut = () =>{
+        logOut()
+        .then(result =>{
+            console.log(result.user)
+        })
+        .catch(error =>{
+            console.error(error)
+        })
+
+    }
+
     return (
         <div>
-             <nav className="flex justify-between items-center flex-col gap-3 md:flex-row py-5 px-6 text-lg ">
+            <nav className="flex justify-between items-center flex-col gap-3 md:flex-row py-5 px-6 text-lg ">
                 <Logo></Logo>
-                <ul className="flex gap-5 font-bold">
+                <ul className="flex gap-5 flex-col md:flex-row font-bold">
                     <li>
                         <NavLink
                             to="/"
@@ -19,7 +37,7 @@ const Navbar = () => {
                             Home
                         </NavLink>
                     </li>
-                    {/* <li>
+                    <li>
                         <NavLink
                             to="/blog"
                             className={({ isActive, isPending }) =>
@@ -28,7 +46,7 @@ const Navbar = () => {
                         >
                             Blog
                         </NavLink>
-                    </li> */}
+                    </li>
                     <li>
                         <NavLink
                             to="/faq"
@@ -39,7 +57,7 @@ const Navbar = () => {
                             FAQ
                         </NavLink>
                     </li>
-                    
+
                     <li>
                         <NavLink
                             to="/about"
@@ -60,7 +78,7 @@ const Navbar = () => {
                             Login
                         </NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink
                             to="/register"
                             className={({ isActive, isPending }) =>
@@ -69,12 +87,20 @@ const Navbar = () => {
                         >
                             Register
                         </NavLink>
-                    </li>
-                    
+                    </li> */}
+
                 </ul>
-                <Link>
+                {/* <Link to="/login">
                 <button className="btn bg-[#ca786c] text-white px-10 rounded-none">Login</button>
-                </Link>
+                </Link> */}
+                {
+                    user ?
+                        <button  onClick={handleSignOut} className="btn  bg-[#ca786c] text-white px-10 rounded-none">Sign Out</button>
+                        :
+                        <Link to='/login'>
+                            <button className="btn bg-[#ca786c] text-white px-10 rounded-none">Login</button>
+                        </Link>
+                }
             </nav>
         </div>
     );
