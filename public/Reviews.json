@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "cReview": "I can't express how grateful we are for the incredible wedding planning services provided by XYZ Weddings. From start to finish, they went above and beyond to make our special day absolutely perfect. Their attention to detail, creativity, and professionalism are unmatched. Emily and her team turned our dreams into reality, and we couldn't be happier with the results. Our guests are still raving about how smoothly everything went.",
+        "client_name": "Emil Johnson",
+        "client_image": "https://i.ibb.co/jVzMMqK/groomimage.png"
+    },
+    {
+        "id": 2,
+        "cReview": "We were blown away by the talent and dedication of PQR Photography & Videography at our wedding. They went above and beyond to capture every detail and emotion of our special day. The quality of their work is outstanding, and the final photos and videos exceeded our expectations. The team's professionalism and creativity shine through in their work. We are grateful for the beautiful memories they've created for us.",
+        "client_name": "Sarah Davis",
+        "client_image": "https://i.ibb.co/4fdRKsM/brideimage.png"
+    }
+   
+]

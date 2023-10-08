@@ -19,7 +19,7 @@ const Navbar = () => {
                             Home
                         </NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                         <NavLink
                             to="/blog"
                             className={({ isActive, isPending }) =>
@@ -28,7 +28,7 @@ const Navbar = () => {
                         >
                             Blog
                         </NavLink>
-                    </li>
+                    </li> */}
                     <li>
                         <NavLink
                             to="/faq"
@@ -48,6 +48,26 @@ const Navbar = () => {
                             }
                         >
                             About Us
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/login"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-[#ca786c]  " : ""
+                            }
+                        >
+                            Login
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/register"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-[#ca786c]  " : ""
+                            }
+                        >
+                            Register
                         </NavLink>
                     </li>
                     

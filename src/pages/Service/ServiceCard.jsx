@@ -5,12 +5,12 @@ const ServiceCard = ({service}) => {
 
     return (
         <div className="flex justify-center items-center h-screen">
-            <div className="">
-                <h4 className="pb-10 mb-15 text-5xl font-semibold text-center">
+            <div>
+                <h4 className="pb-10 mb-15 md:text-5xl text-2xl font-semibold text-center">
                     {service_name}
                 </h4>
-                <div className="flex w-full max-w-[48rem] flex-row  bg-white bg-clip-border shadow-md">
-                    <div className="m-0 w-2/5 shrink-0 overflow-hidden rounded-r-none bg-white bg-clip-border">
+                <div className="flex w-full max-w-[48rem] md:flex-row flex-col  bg-white bg-clip-border shadow-md">
+                    <div className="m-0 w-2/5 shrink-0 overflow-hidden rounded-r-none bg-white bg-clip-border ">
                         <img
                             src={service_image}
                             className="h-full w-full object-cover"

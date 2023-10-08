@@ -23,7 +23,7 @@ const Service = () => {
     console.log(service);
 
     return (
-        <div>
+        <div className=" mb-10">
             <ServiceCard service ={service}></ServiceCard>
         </div>
     );
