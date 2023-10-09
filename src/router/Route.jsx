@@ -9,6 +9,7 @@ import Service from "../pages/Service/Service";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Gallery from "../pages/Gallery/Gallery";
 
 
 
@@ -26,7 +27,11 @@ const myCreatedRoute = createBrowserRouter([
         },
         {
             path: '/blog',
-            element: <Blog></Blog>
+            element: <PrivateRoute><Blog></Blog></PrivateRoute>
+        },
+        {
+            path: '/gallery',
+            element: <PrivateRoute><Gallery></Gallery></PrivateRoute>
         },
         {
             path: '/faq',

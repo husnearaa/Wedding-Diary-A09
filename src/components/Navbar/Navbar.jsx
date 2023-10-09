@@ -11,14 +11,14 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
 
-    const handleSignOut = () =>{
+    const handleSignOut = () => {
         logOut()
-        .then(result =>{
-            console.log(result.user)
-        })
-        .catch(error =>{
-            console.error(error)
-        })
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
 
     }
 
@@ -45,6 +45,16 @@ const Navbar = () => {
                             }
                         >
                             Blog
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/gallery"
+                            className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "text-[#ca786c] " : ""
+                            }
+                        >
+                            Gallery
                         </NavLink>
                     </li>
                     <li>
@@ -93,14 +103,26 @@ const Navbar = () => {
                 {/* <Link to="/login">
                 <button className="btn bg-[#ca786c] text-white px-10 rounded-none">Login</button>
                 </Link> */}
-                {
+
+                {/* {
                     user ?
                         <button  onClick={handleSignOut} className="btn  bg-[#ca786c] text-white px-10 rounded-none">Sign Out</button>
                         :
                         <Link to='/login'>
                             <button className="btn bg-[#ca786c] text-white px-10 rounded-none">Login</button>
                         </Link>
+                } */}
+                {
+                    user ? <>
+                        <span>{user.email}</span>
+                        <button onClick={handleSignOut} className="btn  bg-[#ca786c] text-white px-10 rounded-none">Sign Out</button>
+                    </>
+                        :
+                        <Link to='/login'>
+                            <button className="btn bg-[#ca786c] text-white px-10 rounded-none">Login</button>
+                        </Link>
                 }
+               
             </nav>
         </div>
     );

@@ -1,17 +1,20 @@
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import swal from 'sweetalert';
 
 
 
 
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext);
+    const { signIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     console.log('location in the login page', location);
+    const [loginError, setLoginError] = useState('');
+    const [success, setSuccess] = useState('');
 
 
     const handleLogin = e => {
@@ -24,17 +27,30 @@ const Login = () => {
         console.log(email, password);
 
 
-        signIn(email, password)
-        .then(result =>{
-            console.log(result.user);
 
-            // navigate after login 
-            navigate(location ?.state ? location.state : '/');
-            
-        })
-        .catch(error =>{
-            console.error(error);
-        })
+         // reset error and success
+         setLoginError('');
+         setSuccess('');
+
+
+
+        // add validation and log in
+        signIn(email, password)
+            .then(result => {
+                console.log(result.user);
+                // setSuccess('User Logged in Successfully.')
+                setSuccess,
+                swal("Good job!", "User Logged in Successfully!", "success");
+
+                // navigate after login 
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch(error => {
+                console.error(error);
+                // setLoginError(error.message);
+                setLoginError,
+                swal("Oops!", "Your email or password is invalid!", "error");
+            })
 
     }
 
@@ -62,6 +78,12 @@ const Login = () => {
                         <button className="btn bg-[#ca786c] text-white">Login</button>
                     </div>
                 </form>
+                {
+                    loginError && <p className="text-red-700">{loginError}</p>
+                }
+                {
+                    success && <p className="text-green-600">{success}</p>
+                }
                 <p className="text-center mt-4 mb-20 pb-5">Don't have an Account? <Link
                     className="text-[#ca786c] font-bold" to='/register'>Register</Link></p>
             </div>
