@@ -9,7 +9,7 @@ import swal from 'sweetalert';
 
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     console.log('location in the login page', location);
@@ -51,8 +51,28 @@ const Login = () => {
                 setLoginError,
                 swal("Oops!", "Your email or password is invalid!", "error");
             })
-
     }
+
+
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user)
+                setSuccess,
+                swal("Good job!", "User Logged in Successfully!", "success");
+
+
+                // navigate after login 
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
+
+
 
     return (
         <div>
@@ -77,6 +97,9 @@ const Login = () => {
                     <div className="form-control mt-6">
                         <button className="btn bg-[#ca786c] text-white">Login</button>
                     </div>
+                    <div className="form-control mt-6">
+                        <button onClick={handleGoogleSignIn} className="btn bg-[#ca786c] text-white">Google</button>
+                    </div>
                 </form>
                 {
                     loginError && <p className="text-red-700">{loginError}</p>
@@ -86,6 +109,7 @@ const Login = () => {
                 }
                 <p className="text-center mt-4 mb-20 pb-5">Don't have an Account? <Link
                     className="text-[#ca786c] font-bold" to='/register'>Register</Link></p>
+                    
             </div>
         </div>
     );
